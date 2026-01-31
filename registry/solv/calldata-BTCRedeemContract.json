@@ -1,0 +1,88 @@
+{
+  "$schema": "../../specs/erc7730-v1.schema.json",
+  "context": {
+    "$id": "Solv BTC Redeem Contract",
+    "contract": {
+      "deployments": [
+        {
+          "chainId": 56,
+          "address": "0x30a61591c5bd3b5ae00d26f6b51c8ef0b9945baf"
+        }
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "token_",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount_",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "receiver_",
+              "type": "string"
+            }
+          ],
+          "name": "redeem",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "owner": "Solv Protocol",
+    "info": {
+      "legalName": "Solv Protocol",
+      "url": "https://app.solv.finance"
+    },
+    "constants": {
+      "solvBTCAddress": "0x4aae823a6a0b376de6a78e74ecc5b079d38cbcf7",
+      "minWithdrawAmount": "0.000001"
+    }
+  },
+  "display": {
+    "definitions": {
+      "withdrawAmount": {
+        "label": "Amount to Withdraw",
+        "format": "tokenAmount",
+        "params": {
+          "tokenPath": "token_"
+        }
+      },
+      "btcReceiver": {
+        "label": "BTC Receiver Address",
+        "format": "raw"
+      }
+    },
+    "formats": {
+      "redeem(address token_,uint256 amount_,string receiver_)": {
+        "$id": "redeemSolvBTC",
+        "intent": "Withdraw BTC",
+        "fields": [
+          {
+            "path": "amount_",
+            "label": "Amount to Withdraw",
+            "format": "tokenAmount",
+            "params": {
+              "tokenPath": "token_"
+            }
+          },
+          {
+            "path": "receiver_",
+            "label": "BTC Receiver Address",
+            "format": "raw"
+          }
+        ],
+        "required": ["amount_", "receiver_"],
+        "excluded": []
+      }
+    }
+  }
+}

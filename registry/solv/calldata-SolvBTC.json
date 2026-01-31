@@ -1,0 +1,27 @@
+{
+  "$schema": "../../specs/erc7730-v1.schema.json",
+  "includes": "../../ercs/calldata-erc20-tokens.json",
+  "context": {
+    "$id": "SolvBTC",
+    "contract": {
+      "deployments": [
+        {
+          "chainId": 56,
+          "address": "0x4aae823a6a0b376de6a78e74ecc5b079d38cbcf7"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "owner": "Solv Protocol",
+    "info": {
+      "legalName": "Solv Protocol",
+      "url": "https://app.solv.finance"
+    },
+    "token": {
+      "ticker": "SolvBTC",
+      "name": "Solv BTC",
+      "decimals": 18
+    }
+  }
+}
