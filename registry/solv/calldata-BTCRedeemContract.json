@@ -1,7 +1,7 @@
 {
   "$schema": "../../specs/erc7730-v1.schema.json",
   "context": {
-    "$id": "Solv BTC Redeem Contract",
+    "$id": "SolvBTC Redeem Contract",
     "contract": {
       "deployments": [
         {

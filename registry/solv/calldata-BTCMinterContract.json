@@ -1,0 +1,67 @@
+{
+  "$schema": "../../specs/erc7730-v1.schema.json",
+  "context": {
+    "$id": "SolvBTC Minter Contract",
+    "contract": {
+      "deployments": [
+        {
+          "chainId": 56,
+          "address": "0xad0fc950fda536ebbb5ead7c1e83929293374845"
+        }
+      ],
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "data_",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "signature_",
+              "type": "bytes"
+            }
+          ],
+          "name": "mint",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "owner": "Solv Protocol",
+    "info": {
+      "legalName": "Solv Protocol",
+      "url": "https://app.solv.finance"
+    },
+    "constants": {
+      "solvBTCTokenAddress": "0x4aae823a6a0b376de6a78e74ecc5b079d38cbcf7"
+    }
+  },
+  "display": {
+    "definitions": {},
+    "formats": {
+      "mint(bytes data_,bytes signature_)": {
+        "$id": "mintSolvBTC",
+        "intent": "Claim SolvBTC",
+        "fields": [
+          {
+            "path": "data_",
+            "label": "Mint Data",
+            "format": "raw"
+          },
+          {
+            "path": "signature_",
+            "label": "Signature",
+            "format": "raw"
+          }
+        ],
+        "required": ["data_", "signature_"],
+        "excluded": []
+      }
+    }
+  }
+}
